@@ -1,0 +1,38 @@
+# Utiliser PHP-FPM officiel
+FROM php:8.4-fpm-alpine
+
+# Dépendances système nécessaires
+RUN apk add --no-cache \
+    curl \
+    git \
+    zip \
+    libpq \
+    postgresql-dev \
+ && docker-php-ext-install pdo pdo_pgsql
+
+# Installer Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Définir les variables d'environnement PROD
+ENV APP_ENV=prod
+ENV APP_DEBUG=0
+
+WORKDIR /app
+COPY . /app
+
+# Créer dossiers var/cache et var/log avec les bons droits
+RUN mkdir -p var/cache var/log \
+ && addgroup -g 1000 appgroup \
+ && adduser -D -G appgroup -u 1000 appuser \
+ && chown -R appuser:appgroup var
+
+# Installer les dépendances PROD (pas de dev, pas de scripts)
+RUN composer install --no-dev --optimize-autoloader --no-scripts
+
+RUN php bin/console lexik:jwt:generate-keypair --overwrite
+
+# Switch vers utilisateur non-root
+USER appuser
+
+EXPOSE 9000
+CMD ["php-fpm"]

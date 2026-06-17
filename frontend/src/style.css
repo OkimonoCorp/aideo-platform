@@ -1,0 +1,470 @@
+@import "tailwindcss";
+@import "./tailwind-utilities.css";
+@tailwind utilities;
+
+/* ========================================
+   THÈME MATERIAL DESIGN 3
+   Couleurs générées via Material Theme Builder
+   https://m3.material.io/theme-builder
+   ======================================== */
+@theme {
+    --color-primary: rgb(0 51 36);
+    --color-surface-tint: rgb(27 107 81);
+    --color-on-primary: rgb(255 255 255);
+    --color-primary-container: rgb(0 84 61);
+    --color-on-primary-container: rgb(255 255 255);
+    --color-secondary: rgb(26 48 39);
+    --color-on-secondary: rgb(255 255 255);
+    --color-secondary-container: rgb(55 78 68);
+    --color-on-secondary-container: rgb(255 255 255);
+    --color-tertiary: rgb(3 48 64);
+    --color-on-tertiary: rgb(255 255 255);
+    --color-tertiary-container: rgb(40 78 94);
+    --color-on-tertiary-container: rgb(255 255 255);
+    --color-error: rgb(96 0 4);
+    --color-on-error: rgb(255 255 255);
+    --color-error-container: rgb(152 0 10);
+    --color-on-error-container: rgb(255 255 255);
+    --color-background: rgb(245 251 245);
+    --color-on-background: rgb(23 29 26);
+    --color-surface: rgb(245 251 245);
+    --color-on-surface: rgb(0 0 0);
+    --color-surface-variant: rgb(219 229 222);
+    --color-on-surface-variant: rgb(0 0 0);
+    --color-outline: rgb(37 46 42);
+    --color-outline-variant: rgb(66 75 70);
+    --color-shadow: rgb(0 0 0);
+    --color-scrim: rgb(0 0 0);
+    --color-inverse-surface: rgb(44 50 46);
+    --color-inverse-on-surface: rgb(255 255 255);
+    --color-inverse-primary: rgb(139 214 182);
+    --color-primary-fixed: rgb(0 84 61);
+    --color-on-primary-fixed: rgb(255 255 255);
+    --color-primary-fixed-dim: rgb(0 59 42);
+    --color-on-primary-fixed-variant: rgb(255 255 255);
+    --color-secondary-fixed: rgb(55 78 68);
+    --color-on-secondary-fixed: rgb(255 255 255);
+    --color-secondary-fixed-dim: rgb(33 55 46);
+    --color-on-secondary-fixed-variant: rgb(255 255 255);
+    --color-tertiary-fixed: rgb(40 78 94);
+    --color-on-tertiary-fixed: rgb(255 255 255);
+    --color-tertiary-fixed-dim: rgb(13 55 71);
+    --color-on-tertiary-fixed-variant: rgb(255 255 255);
+    --color-surface-dim: rgb(180 186 181);
+    --color-surface-bright: rgb(245 251 245);
+    --color-surface-container-lowest: rgb(255 255 255);
+    --color-surface-container-low: rgb(236 242 237);
+    --color-surface-container: rgb(222 228 223);
+    --color-surface-container-high: rgb(208 214 209);
+    --color-surface-container-highest: rgb(194 200 195);
+    --color-surface-field: rgb(255, 255, 255, 0.6);
+
+}
+
+/* ========================================
+   THÈME SOMBRE
+   ======================================== */
+.dark-mode {
+    --color-primary: rgb(183 255 224);
+    --color-surface-tint: rgb(139 214 182);
+    --color-on-primary: rgb(0 0 0);
+    --color-primary-container: rgb(135 210 178);
+    --color-on-primary-container: rgb(0 14 8);
+    --color-secondary: rgb(220 246 232);
+    --color-on-secondary: rgb(0 0 0);
+    --color-secondary-container: rgb(175 200 187);
+    --color-on-secondary-container: rgb(0 14 8);
+    --color-tertiary: rgb(223 243 255);
+    --color-on-tertiary: rgb(0 0 0);
+    --color-tertiary-container: rgb(162 200 220);
+    --color-on-tertiary-container: rgb(0 13 20);
+    --color-error: rgb(255 236 233);
+    --color-on-error: rgb(0 0 0);
+    --color-error-container: rgb(255 174 164);
+    --color-on-error-container: rgb(34 0 1);
+    --color-background: rgb(15 21 18);
+    --color-on-background: rgb(222 228 223);
+    --color-surface: rgb(15 21 18);
+    --color-on-surface: rgb(255 255 255);
+    --color-surface-variant: rgb(64 73 68);
+    --color-on-surface-variant: rgb(255 255 255);
+    --color-outline: rgb(233 242 235);
+    --color-outline-variant: rgb(187 197 190);
+    --color-shadow: rgb(0 0 0);
+    --color-scrim: rgb(0 0 0);
+    --color-inverse-surface: rgb(222 228 223);
+    --color-inverse-on-surface: rgb(0 0 0);
+    --color-inverse-primary: rgb(0 83 60);
+    --color-primary-fixed: rgb(166 242 209);
+    --color-on-primary-fixed: rgb(0 0 0);
+    --color-primary-fixed-dim: rgb(139 214 182);
+    --color-on-primary-fixed-variant: rgb(0 21 13);
+    --color-secondary-fixed: rgb(206 233 219);
+    --color-on-secondary-fixed: rgb(0 0 0);
+    --color-secondary-fixed-dim: rgb(179 204 191);
+    --color-on-secondary-fixed-variant: rgb(1 21 13);
+    --color-tertiary-fixed: rgb(194 232 253);
+    --color-on-tertiary-fixed: rgb(0 0 0);
+    --color-tertiary-fixed-dim: rgb(166 204 224);
+    --color-on-tertiary-fixed-variant: rgb(0 19 28);
+    --color-surface-dim: rgb(15 21 18);
+    --color-surface-bright: rgb(75 81 78);
+    --color-surface-container-lowest: rgb(0 0 0);
+    --color-surface-container-low: rgb(27 33 30);
+    --color-surface-container: rgb(44 50 46);
+    --color-surface-container-high: rgb(55 61 57);
+    --color-surface-container-highest: rgb(66 72 69);
+    --color-surface-field: rgb(31, 37, 34, 0.6);
+}
+
+/* ========================================
+   MODE SOMBRE - UTILITAIRES
+   ======================================== */
+
+/* Inverser les images/logos en mode sombre */
+.dark-mode .dark\:invert {
+    filter: invert(1);
+}
+
+/* Icônes d'actions adresse : noir en clair, blanc en sombre */
+.address-action-icon {
+    filter: brightness(0);
+}
+
+.dark-mode .address-action-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Bouton ajout adresse : primaire en clair, container en sombre */
+.address-submit {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.dark-mode .address-submit {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary-container);
+}
+
+/* Bouton annuler adresse : surface en clair, conserve en sombre */
+.address-cancel {
+    background-color: var(--color-surface-container-high);
+    color: var(--color-on-surface);
+    border: 1px solid var(--color-outline-variant);
+}
+
+.dark-mode .address-cancel {
+    background-color: var(--color-surface-container-high);
+    border-color: var(--color-outline);
+}
+
+/* Icônes dans les champs de formulaire - inverser en mode sombre */
+.dark-mode .form-field-icon,
+.dark-mode label > img:first-child {
+    filter: invert(0.8);
+}
+
+/* ========================================
+   STYLES DE BASE
+   ======================================== */
+#root, html, body {
+    @apply h-full w-full;
+}
+
+/* Titres - Utilise les couleurs sémantiques Material */
+h1 { @apply text-4xl font-bold py-8 text-primary; }
+h2 { @apply text-3xl font-semibold text-on-surface; }
+h3 { @apply text-2xl text-on-surface-variant; }
+
+/* Boutons globaux */
+button {
+    cursor: pointer;
+}
+
+/* ========================================
+   LEAFLET (CARTE)
+   Styles pour les marqueurs et popups
+   ======================================== */
+.leaflet-container {
+    @apply h-screen z-1;
+}
+
+/* Mode sombre pour les tuiles de la carte */
+.dark-mode .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
+}
+
+/* Réinitialiser le filtre pour les marqueurs et popups */
+.dark-mode .leaflet-marker-pane,
+.dark-mode .leaflet-popup-pane,
+.dark-mode .leaflet-overlay-pane {
+    filter: none;
+}
+
+/* Cluster de marqueurs - surface-container-highest pour élévation */
+.custom-marker-cluster {
+    @apply flex! justify-center items-center rounded-full font-black text-xl
+           border-2 border-primary shadow-md
+           bg-surface-container-highest text-on-surface;
+}
+
+/* Bouton de fermeture des popups */
+.leaflet-popup-close-button {
+    @apply w-9! h-9! text-4xl! rounded-full! z-1000
+           flex! justify-center! items-center!
+           bg-surface-container-high! text-on-surface! shadow-lg!;
+    top: -8px !important;
+    right: -6px !important;
+    line-height: 44px !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.leaflet-popup-close-button:hover {
+    @apply bg-error-container! text-on-error-container!;
+}
+
+.leaflet-popup-content-wrapper {
+    @apply p-1.5! bg-surface-container! rounded-xl!;
+}
+
+/* ========================================
+   CALENDRIER (SCHEDULE-X)
+   ======================================== */
+.sx-react-calendar-wrapper {
+    @apply w-full flex-1 flex flex-col min-h-0 max-h-full rounded-4xl border border-outline-variant overflow-hidden;
+}
+
+.sx-react-calendar-wrapper .sx__calendar-wrapper {
+    @apply h-full flex flex-col min-h-0;
+}
+
+.sx-react-calendar-wrapper .sx__calendar {
+    @apply h-full flex flex-col min-h-0;
+}
+
+/* ========================================
+   BARRE LATÉRALE (SIDEBAR)
+   Container: surface-container-low
+   Icônes: surface-container avec élévation
+   ======================================== */
+.app-sidebar {
+    /* Ombres personnalisées pour l'élévation */
+    --sidebar-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --sidebar-shadow-selected: 0 4px 16px rgba(0,0,0,0.12);
+    @apply bg-surface-variant
+}
+
+/* Boutons d'icône dans la sidebar */
+.app-sidebar .icon,
+.app-sidebar .icon-selected,
+.app-sidebar .theme-toggle {
+    @apply inline-flex items-center justify-center
+           w-18 h-18 rounded-xl
+           bg-surface-container border border-outline-variant
+           cursor-pointer transition-all duration-150;
+    box-shadow: var(--sidebar-shadow);
+}
+
+/* Taille des icônes SVG/images */
+.app-sidebar .icon svg,
+.app-sidebar .icon-selected svg,
+.app-sidebar .theme-toggle svg,
+.app-sidebar .icon img,
+.app-sidebar .icon-selected img,
+.app-sidebar .theme-toggle img {
+    @apply w-8! h-8! max-w-8! max-h-8! min-w-8! min-h-8!
+           transition-none! transform-none!;
+}
+
+/* Couleur des icônes normales - on-surface-variant */
+.app-sidebar .icon,
+.app-sidebar .theme-toggle {
+    @apply text-on-surface-variant;
+}
+
+.app-sidebar .icon svg,
+.app-sidebar .icon svg path,
+.app-sidebar .icon svg g,
+.app-sidebar .theme-toggle svg,
+.app-sidebar .theme-toggle svg path,
+.app-sidebar .theme-toggle svg g {
+    @apply fill-on-surface-variant!;
+}
+
+/* État hover - légère élévation */
+.app-sidebar .icon:hover,
+.app-sidebar .theme-toggle:hover {
+    @apply bg-surface-container-high border-outline transform-none!;
+    box-shadow: var(--sidebar-shadow-selected);
+}
+
+.app-sidebar .icon:hover svg,
+.app-sidebar .theme-toggle:hover svg,
+.app-sidebar .icon:hover img,
+.app-sidebar .theme-toggle:hover img,
+.app-sidebar .icon:active svg,
+.app-sidebar .theme-toggle:active svg,
+.app-sidebar .icon:active img,
+.app-sidebar .theme-toggle:active img {
+    @apply transform-none! scale-100!
+           w-8! h-8! max-w-8! max-h-8! min-w-8! min-h-8!;
+}
+
+/* État sélectionné - primary-container avec gradient */
+.app-sidebar .icon-selected,
+.app-sidebar .theme-toggle.icon-selected {
+    @apply border-primary;
+    background: linear-gradient(180deg, var(--color-primary-container), var(--color-primary));
+    box-shadow: var(--sidebar-shadow-selected);
+}
+
+.app-sidebar .icon-selected:hover {
+    background: linear-gradient(180deg, var(--color-primary-container), var(--color-primary));
+    box-shadow: var(--sidebar-shadow-selected);
+}
+
+/* Icônes sélectionnées - on-primary pour contraste */
+.app-sidebar .icon-selected {
+    @apply text-on-primary;
+}
+
+.app-sidebar .icon-selected svg,
+.app-sidebar .icon-selected svg path,
+.app-sidebar .icon-selected svg g {
+    @apply fill-on-primary!;
+}
+
+/* Toggle thème sélectionné - style différent */
+.app-sidebar .theme-toggle.icon-selected svg,
+.app-sidebar .theme-toggle.icon-selected svg path {
+    @apply fill-on-primary-container!;
+}
+
+/* Focus visible pour accessibilité */
+.app-sidebar .icon:focus-visible,
+.app-sidebar .theme-toggle:focus-visible,
+.app-sidebar .icon-selected:focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
+}
+
+/* Espacement entre les boutons */
+.app-sidebar .section > * {
+    @apply mb-3;
+}
+
+/* ========================================
+   ICÔNES DE SERVICE (MAP)
+   Mode clair: noir, Mode sombre: blanc
+   ======================================== */
+.service-icon {
+    filter: brightness(0) saturate(100%);
+}
+
+.dark-mode .service-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ========================================
+   INPUT DATETIME PICKER
+   Logo du calendrier noir en clair, blanc en sombre
+   ======================================== */
+.dark-mode-datetime::-webkit-calendar-picker-indicator {
+    filter: brightness(0) saturate(100%);
+}
+
+.dark-mode .dark-mode-datetime::-webkit-calendar-picker-indicator {
+    filter: brightness(0) invert(1);
+}
+
+.dark-mode input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: brightness(0) invert(1);
+}
+
+/* ========================================
+   ANIMATIONS POP-UP DE RÉCOMPENSE
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(0) rotateZ(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(600px) rotateZ(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes spinSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.4s ease-out;
+}
+
+.animate-slideDown {
+    animation: slideDown 0.5s ease-out;
+}
+
+.animate-slideUp {
+    animation: slideUp 0.5s ease-out;
+}
+
+.animate-confetti {
+    animation: confetti 3s ease-out infinite;
+}
+
+.animate-spin-slow {
+    animation: spinSlow 3s linear infinite;
+}

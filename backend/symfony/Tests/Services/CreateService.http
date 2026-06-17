@@ -1,0 +1,14 @@
+POST http://localhost:8000/api/services
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NjgyMjYwNzcsImV4cCI6MTc2ODIyOTY3Nywicm9sZXMiOlsiUk9MRV9BSURBTlQiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJqZWFuQHRlc3QuY29tIn0.N71Kz2N6VJ4rbMD_IPHrbQ42Le_F-B5qQJh_3dLGfb3xCPMgIlueXcAxvlEyqi3m-dXXiLVR5pZy0objAhsTIPUmFxfNXoYaEjIGgRoYrkcjdlb2Y9NWXjzkboRKItoxztZWPizsH0EEeA5UUMNyffdvoQBYGW8Z8CGK0n3mf8JEuuMx56qcjSsmdvu7Gl9CzdFGKWIdwoA2yWnhjVMESP8gapMn4aHNfvXFCqsVYKpvuvpyK9IYGtAQ8rumXWPs3Zy4m7QEaqX_OT_aqFNvvITxjUeIpl-4gNPZ0-zTsmSfd7OuZH-vb1975ghhNoNE2DqCNo5u3mtZPHR03kHndA
+
+{
+    "nom": "Tâche Exemple",
+    "description": "Description de la tâche exemple",
+    "date": "2026-01-01T10:00:00",
+    "duree": 2.5,
+    "distance": 10,
+    "maxDemandeurs": 5,
+    "latitude": 48.8599,
+    "longitude": 2.3522,
+    "type": "proposition"
+}

@@ -1,0 +1,16 @@
+POST http://localhost:8000/api/creer_compte
+Content-Type: application/json
+
+
+{
+  "type": "professionnel",
+  "email": "pro@test.com",
+  "password": "superMdp123",
+  "nom": "Entreprise SAS",
+  "nomContact": "M. Directeur",
+  "telephone": "0102030405",
+  "adresses": [
+      "12 Rue de la République, Paris",
+      "5 Avenue des Champs, Lyon"
+  ]
+}

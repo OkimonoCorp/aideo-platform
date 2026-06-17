@@ -1,0 +1,12 @@
+POST http://localhost:8000/api/creer_compte
+Content-Type: application/json
+
+{
+    "email": "test3@mail.com",
+    "nom": "dsfqqfq",
+    "prenom": "fsdfsdgsgdsg",
+    "password": "superMotDePasse123",
+    "telephone": "0674820472",
+    "adresse": "",
+    "type": "aidant"
+}

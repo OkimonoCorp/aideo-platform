@@ -1,0 +1,8 @@
+PUT http://localhost:8000/api/avantages/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NjgyOTY4MDIsImV4cCI6MTc2ODMwMDQwMiwicm9sZXMiOlsiUk9MRV9QUk8iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJtaWNoZWxwcm9AdGVzdC5jb20ifQ.OtO21wbYj9BSur2UOJIw9Drat-ZXsz3ByJB10tIr14UARtfkc_vCztYoC04YaZmJpo5VIanzfnyvoturF8njnvCRXTmscziYxUT57vEajNnhkfJMbT1lmwIiLPAAblmuuIzPXfoHgivwzZXvZ1VH-D6SJFIBnHWKRtJzQv98X3DJslS2ryWNGEfVq0b83xczX6kbt1KsodhvxQlegsGEhDLpbp_AxaoTc431gV45vNHE0loV0xZUNIY-GvmW-Nfzfrtax_43x_k3GzFnBflVi6m0oEI6l61EKbw5N_wRRCzqNu7IaTIY_vKxlYg4cUxJvn9oyPCFp9e_g7H_GlJTXg
+
+{
+    "nom": "Réduction -30% (Nouveau titre)",
+    "prix": 45.0
+}

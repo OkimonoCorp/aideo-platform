@@ -1,0 +1,56 @@
+services:
+  php:
+    container_name: php
+    build:
+      context: ./backend/symfony
+    working_dir: /app
+    volumes:
+      - ./backend/symfony:/app
+    ports:
+      - "8000:8000"
+    command: sh -c "composer install && php -S 0.0.0.0:8000 -t public"
+    depends_on:
+      - postgres
+    user: "${UID}:${GID}"
+
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: symfony
+      POSTGRES_USER: symfony
+      POSTGRES_PASSWORD: symfony
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./backend/postgres:/var/lib/postgresql/data
+
+  node:
+    image: node:20
+    container_name: node
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "5173:5173"
+    environment:
+      - "CHOKIDAR_USEPOLLING=true"
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    user: "${UID}:${GID}"
+
+  cypress:
+    image: cypress/included:15.1.0
+    container_name: cypress
+    working_dir: /app
+    volumes:
+      - ./test/Cypress:/app
+    environment:
+      - CYPRESS_baseUrl=http://node:5173
+      - DBUS_SESSION_BUS_ADDRESS=/dev/null
+    depends_on:
+      - php
+      - node
+    #entrypoint: ""
+    stdin_open: true
+    tty: true

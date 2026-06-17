@@ -1,0 +1,10 @@
+POST http://localhost:8000/api/taches
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NjgyMzE5NjYsImV4cCI6MTc2ODIzNTU2Niwicm9sZXMiOlsiUk9MRV9BSURBTlQiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJhaWRhbnRAdGVzdC5jb20ifQ.nNnzlrcRwpK3Pt8rypBkCXeX7NcHOxB9MJLxM9Dd3r-Yh-u3OyHmEZ5-HkBAJvcxLvgqYmp_CInqDMK29lyIqpuwBcXZ-nVv4xM0oZqYbpxsGs2xYoJ-_Hku0c87wLtRCxE01M7AiKb2-YRgiKK4pUGHMcKMRRvYr9cfeYxs5eLtNZ-2616kHxdSaJ7qXe0LRIKd1QnEMbLmVuVnZAfQGDMxKiViODSkhaa8bjbNggRnFpGXpjQh5xD22eGD2VnmbzyVoey77MwHwWE1-FYh1MTBX3oiWvMxITs5k86DqYDMggKEHrFpWZPkX5B5B5UoD5UDgg0J9ilKQXxUN-c1ew
+
+{
+  "nom": "Grand machin",
+  "description": "Nettoyer tout le salon et la cuisine",
+  "date": "2026-06-15 14:30:00",
+  "duree": 2.5
+}

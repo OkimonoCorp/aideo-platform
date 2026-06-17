@@ -1,0 +1,108 @@
+@layer components {
+  /* ========================================
+     CHAMPS DE TEXTE (TEXT FIELD)
+     Material: surface pour le fond, on-surface pour le texte
+     Bordure: outline-variant, focus: primary
+     ======================================== */
+  .textField {
+    @apply w-full flex flex-col gap-1;
+  }
+
+  /* Label - on-surface-variant pour différencier du contenu */
+  .textFieldLabel {
+    @apply text-sm font-medium w-full text-on-surface-variant;
+  }
+
+  /* Input - surface-container-lowest pour élévation minimale */
+  .textFieldInput {
+    @apply text-lg w-full px-3 py-2 rounded-lg
+           bg-surface-container-lowest text-on-surface
+           border border-outline-variant
+           transition-[box-shadow,border-color,background-color] duration-150 ease-in-out;
+  }
+
+  /* Focus - bordure primaire avec ombre légère */
+  .textFieldInput:focus {
+    @apply outline-none border-primary
+           shadow-[0_0_0_2px_rgba(27,107,81,0.15)];
+  }
+
+  /* Hover - bordure plus visible */
+  .textFieldInput:hover {
+    @apply border-outline;
+  }
+
+  /* Placeholder - on-surface-variant avec opacité */
+  .textFieldInput::placeholder {
+    @apply text-on-surface-variant/60;
+  }
+
+  /* Mode sombre - ajustements automatiques via les variables */
+  .dark-mode .textFieldInput {
+    @apply bg-surface-container-low text-on-surface border-outline-variant;
+  }
+
+  .dark-mode .textFieldLabel {
+    @apply text-on-surface-variant;
+  }
+
+  /* ========================================
+     BOUTON DE DÉCONNEXION
+     Material: surface avec bordure outline
+     Hover: primary accent
+     ======================================== */
+  .logout-button {
+    @apply inline-flex items-center justify-center rounded-full px-3 py-2
+           text-base font-medium
+           bg-surface-container! border border-outline-variant!
+           shadow-sm! text-on-surface!
+           transition-all duration-150 ease-in-out;
+  }
+
+  /* Hover - accent primaire */
+  .logout-button:hover {
+    @apply border-primary! bg-surface-container-high!
+           shadow-md!;
+  }
+
+  /* Active/Focus - élévation accrue */
+  .logout-button:active,
+  .logout-button:focus-visible {
+    @apply bg-surface-container-high! border-primary!
+           shadow-lg! outline-none;
+  }
+
+  /* Focus visible pour accessibilité */
+  .logout-button:focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
+  }
+
+  /* Icône dans le bouton */
+  .logout-button svg {
+    @apply w-5 h-5 transition-none! fill-primary!;
+  }
+
+  /* Icône pleine largeur (pour UserInfo) */
+  .logout-icon-full {
+    @apply w-full h-full max-w-none! max-h-none! min-w-0! min-h-0!
+           transform-none! object-contain;
+  }
+
+  /* ========================================
+     CONTENEUR SECTION
+     Material: surface-container avec bordure outline-variant
+     Utilisé pour les cartes et panneaux
+     ======================================== */
+  .section {
+    @apply border border-outline-variant rounded-4xl bg-surface-container-lowest
+           transition-[background-color,border-color,box-shadow] duration-150;
+  }
+
+  /* ========================================
+     UTILITAIRE SPACER
+     Flex-grow pour remplir l'espace disponible
+     ======================================== */
+  .spacer {
+    @apply flex-1;
+  }
+}

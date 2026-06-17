@@ -1,0 +1,49 @@
+services:
+    php:
+        build:
+            context: ./backend/symfony
+            dockerfile: Dockerfile.prod
+        container_name: symfony_php
+        expose:
+            - "9000"
+        environment:
+            - APP_ENV=prod
+            - APP_DEBUG=0
+        depends_on:
+            - postgres
+
+    nginx:
+        image: nginx:alpine
+        container_name: symfony_nginx
+        ports:
+            - "8732:80"
+        volumes:
+            # Monter uniquement le dossier var pour cache/log persistants
+            - ./var:/app/var
+            - ./docker/nginx/conf:/etc/nginx/conf.d
+        depends_on:
+            - php
+
+    postgres:
+        image: postgres:16
+        container_name: symfony_postgres
+        environment:
+            POSTGRES_DB: symfony
+            POSTGRES_USER: symfony
+            POSTGRES_PASSWORD: symfony
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+    react:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile.prod
+        container_name: react_front
+        ports:
+            - "3000:80"
+        environment:
+            - NODE_ENV=production
+        depends_on:
+            - php
+
+volumes:
+    pgdata:

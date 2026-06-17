@@ -1,0 +1,9 @@
+PUT http://localhost:8000/api/profile
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3Njc5NzEwNDYsImV4cCI6MTc2Nzk3NDY0Niwicm9sZXMiOlsiUk9MRV9BSURBTlQiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJhaWRhbnRAdGVzdC5jb20ifQ.VJXctgZHsf64PoxxPNC2ZjVu4nkL-EXePJfWOYvTKoHRlOmAYG_B2A3AFMdwc0BqZBz7uusEvgmnh6do4-z-v8osnS0oly_R7nn4PkNAluPxd9zZHBrOUaei6kXQJtkrURaY4gM2bsiBn08BJpznR66iqaE58rfU-4kYctlMlJA1uxovlrFo7oRK7bhyR2GY2aIjGAIPK1D65HWRkxN58TuUAm7scCxx9orOR6pU0ctMTLluJymOL_s7FkxuOVKLt8xatq9PgYGxPDZpjDRL6hCPnxbR7qt8U9zRTOzUs8DzvTDY_BQT9dMNHKTsJqi30vwuK8nwhHpvU-eGvb--hw
+
+{
+    "email": "aidant@test.com",
+    "nom": "test"
+}
+

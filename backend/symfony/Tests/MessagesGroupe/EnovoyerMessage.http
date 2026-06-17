@@ -1,0 +1,9 @@
+POST http://localhost:8000/api/messages-groupe
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3Njg0MTA0OTMsImV4cCI6MTc2ODQxNDA5Mywicm9sZXMiOlsiUk9MRV9BSURBTlQiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJqZWFuQHRlc3QuY29tIn0.N7m_7I4d1egV6zPadjJ1urG5jMxNn7sI8rPMMNMNdsPqldXu-xI8rEMzJVB_hP1gcF-anpQu8UTnkfjMbppsgkz-m9BVIzHYIbDotkbD-Erz1PVRE8l1qv0fn0DAg8JdtMYX7vFKxTGec8mLqUMA4VXOGyLlHT8nX-PKWvpck2qsmxn_QTothf2nYTDL8mZWBEq6kJUBkd0Ia3xZDBUvN95cdnmbhCdfXRSNBoqQ9d4ehGWT6tjEBSLybFdv76SkPLY0tRrY_cpISE8vWh8S15xsstPNaEfiYY1Ju_ICgEIuPghbsGNMslT1h1_k4IXUedA6IFHzxfW0K4kGrZmluA
+
+
+{
+    "groupeId": 1,
+    "texte": "Qui est dispo pour le repas de dimanche ?"
+}

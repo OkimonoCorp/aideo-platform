@@ -1,0 +1,10 @@
+POST http://localhost:8000/api/avantages
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NjgyOTkxNTIsImV4cCI6MTc2ODMwMjc1Miwicm9sZXMiOlsiUk9MRV9QUk8iLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJtaWNoZWxwcm9AdGVzdC5jb20ifQ.dX0tyHpf8PXJAtUAMrbFalQgK-mCx1l_6_mHTXpxZoF4pBeSejSQpnBH9P0P4CY2ncvY3vIPsb1Ajt4Lqf7Wj7vJhl3Afmtia2JI1FMbsbo-N5QIx7R7agsSbbLRYudkZJus9UadVHPlnAAD6VdhGMgjHWo6cz5WSjvtbjSlbtgMKsjXdE5fSungX20TtsQu52YLCMzGb4JKiq7cKAV8U5jLGYoQhd48XDQV4iBdtUxbNhGROKFAkwUTM7FIpEFVnrm6gTz1zqM738Zs0zw_zBsgjHJb0BOl0OA2RaYoaRTN7ZtCsQey7aiqKotqZJApvDFzDfPUOdC2OQ4gvdpcgQ
+
+{
+    "nom": "Réduction -20% Pizza1111",
+    "description": "Valable sur toutes les pizzas le mardi soir.",
+    "prix": 50.0,
+    "lienQR": "https://monsite.com/qr/code-promo-123"
+}
